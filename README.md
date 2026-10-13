@@ -1,43 +1,94 @@
-# Astro Starter Kit: Minimal
+# Salsabila | Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
+Personal portfolio of **Salsabila**, an AI Full-Stack Developer based in Bandung, Indonesia. It showcases my experience, projects, and tech stack in a fast, responsive, and accessible static site.
+
+**Live site:** [salsabila.dev](https://salsabila.dev)
+
+![Portfolio preview](./public/preview-porto.png)
+
+## About
+
+I build full-stack products and integrate applied AI directly into web apps. This portfolio presents the work behind that: a multi-brand warehouse management system, AI-powered assistants, computer vision, and more, each with the problem it solves and the result it delivered.
+
+## Sections
+
+- **Hero:** introduction, value proposition, and key stats
+- **About:** background, focus, current role, and availability
+- **Experience:** internship, cohort, writing, and community work
+- **Projects:** featured work, each told as problem, solution, and impact
+- **Tech Stack:** tools grouped by web, backend, and applied AI
+- **Education:** academic background at Universitas Komputer Indonesia
+- **Contact:** email, GitHub, and LinkedIn
+
+## Features
+
+- Responsive layout for desktop, tablet, and mobile
+- Light and dark mode toggle
+- Draggable, auto-scrolling tech stack marquee
+- Project cards with image sliders and direct links
+- SEO-ready: meta tags, Open Graph, sitemap, and structured data
+- Minimal client-side JavaScript for fast load times
+
+## Tech Stack
+
+| Layer | Technologies |
+|---|---|
+| Framework | Astro |
+| Styling | Tailwind CSS |
+| Deployment | Vercel |
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/salsabl22/portfolio.git
+cd portfolio
+npm install
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Development
 
-## 🚀 Project Structure
+```bash
+npm run dev
+```
 
-Inside of your Astro project, you'll see the following folders and files:
+Open `http://localhost:4321` in your browser.
 
-```text
-/
-├── public/
+### Build for production
+
+```bash
+npm run build
+npm run preview
+```
+
+## Project Structure
+
+```
+portfolio/
+├── public/          # Static assets (favicon, og-image, icons, robots.txt)
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── components/  # Reusable UI components
+│   ├── layouts/     # Page layouts and SEO head
+│   ├── pages/       # Site pages
+│   └── styles/      # Global styles
+├── astro.config.mjs
+├── tailwind.config.mjs
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Contact
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- **Email:** salsabila.codes@gmail.com
+- **LinkedIn:** [linkedin.com/in/salsabilatech](https://linkedin.com/in/salsabilatech)
+- **GitHub:** [github.com/salsabl22](https://github.com/salsabl22)
 
-Any static assets, like images, can be placed in the `public/` directory.
+## License
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+© 2026 Salsabila. All rights reserved.
+The source is shared for reference. Please do not copy the content or design as your own.
