@@ -1,16 +1,1003 @@
 ---
+import '../styles/global.css';
+
+/* ── Tech Stack Data ───────────────────────────────────────────────────── */
+const webStack = [
+  { label: "React",       icon: "https://skillicons.dev/icons?i=react" },
+  { label: "Next.js",     icon: "https://skillicons.dev/icons?i=nextjs" },
+  { label: "Laravel",     icon: "https://skillicons.dev/icons?i=laravel" },
+  { label: "TypeScript",  icon: "https://skillicons.dev/icons?i=ts" },
+  { label: "Node.js",     icon: "https://skillicons.dev/icons?i=nodejs" },
+  { label: "FastAPI",     icon: "https://skillicons.dev/icons?i=fastapi" },
+  { label: "Flask",       icon: "https://skillicons.dev/icons?i=flask" },
+  { label: "MongoDB",     icon: "https://skillicons.dev/icons?i=mongodb"},
+  { label: "Prisma",      icon: "https://skillicons.dev/icons?i=prisma"},
+  { label: "TailwindCSS", icon: "https://skillicons.dev/icons?i=tailwind" },
+  { label: "Python",      icon: "https://skillicons.dev/icons?i=python" },
+  { label: "Astro",       icon: "https://skillicons.dev/icons?i=astro" },
+  { label: "Docker",      icon: "https://skillicons.dev/icons?i=docker" },
+  { label: "Vercel",      icon: "https://skillicons.dev/icons?i=vercel" },
+  { label: "JavaScript", icon: "https://skillicons.dev/icons?i=js" },
+  { label: "Git",        icon: "https://skillicons.dev/icons?i=git" },
+  { label: "GitHub",     icon: "https://skillicons.dev/icons?i=github" },
+  { label: "Figma",      icon: "https://skillicons.dev/icons?i=figma" },
+];
+
+const aiStack = [
+  { label: "PyTorch",     icon: "https://skillicons.dev/icons?i=pytorch" },
+  { label: "TensorFlow",  icon: "https://skillicons.dev/icons?i=tensorflow" },
+  { label: "Keras",       icon: "https://skillicons.dev/icons?i=keras" },
+  { label: "OpenCV",      icon: "https://skillicons.dev/icons?i=opencv" },
+  { label: "Pandas",      icon: "https://cdn.simpleicons.org/pandas/150458" },
+  { label: "NumPy",       icon: "https://cdn.simpleicons.org/numpy/013243" },
+  { label: "Streamlit",   icon: "https://cdn.simpleicons.org/streamlit/FF4B4B" },
+  { label: "HuggingFace", icon: "https://cdn.simpleicons.org/huggingface/FFD21E" },
+  { label: "OpenAI",      icon: "https://api.iconify.design/simple-icons:openai.svg" },
+  { label: "LangChain",   icon: "https://cdn.simpleicons.org/langchain/1C3C3C" },
+  { label: "Tableau",     icon: "https://api.iconify.design/simple-icons:tableau.svg" },
+  { label: "Power BI",    icon: "https://api.iconify.design/simple-icons:powerbi.svg" },
+  { label: "MySQL",       icon: "https://skillicons.dev/icons?i=mysql" },
+  { label: "XGBoost",     icon: "https://raw.githubusercontent.com/dmlc/dmlc.github.io/master/img/logo-m/xgboost.png" },
+  { label: "Scikit-learn", icon: "https://cdn.simpleicons.org/scikitlearn/F7931E" },
+];
+
+/* ── 3 Experiences (each with 3 preview images that auto-slide) ────────── */
+const experiences = [
+  {
+    id: "exp-1",
+    role: "AI Full-Stack Developer Cohort",
+    company: "Asah led by Dicoding Supported by GOTO",
+    period: "August 2026 — present",
+    description: "Built a capstone solution to digitize Indonesian MSMEs (UMKM), turning real business problems into a working full-stack, AI-integrated application. Completed 10+ certified courses spanning frontend, backend, databases, and AI integration. Strengthened teamwork, communication, and problem-solving through intensive project-based collaboration.",
+    tags: ["Next.js", "FastAPI", "MySQL", "Vite", "TailwindCSS", "GitHub", "Problem Solving", "Collaboration", "Teamwork"],
+    images: ["/asah-1.jpeg", "/asah-2.jpeg", "/asah-3.jpeg", "/asah-4.jpeg"],
+    imageAlt: "AI Full-Stack Developer Cohort at Asah led by Dicoding Supported by GOTO",
+  },
+  {
+    id: "exp-2",
+    role: "Full-Stack Developer Intern",
+    company: "CV Bujangan Wajib Sejahtera",
+    period: "August 2026 — October 2026",
+    description: "Warehouse teams across 3 brands and 20+ branches needed one reliable view of inventory and sales. I built a full-stack stock opname and warehouse management system with React, Node.js/Express, Prisma, and MySQL, featuring 15+ frontend modules, role-based access, and a scalable backend. The dashboards and report export now streamline inventory monitoring, and the brand-specific, plain-language interface keeps the system easy for non-technical staff.",
+    tags: ["React", "Node.js", "Express", "Prisma", "MySQL", "Problem Solving", "Communication", "Attention to Detail"],
+    images: ["/fotosnaps-1.png", "/fotosnaps-2.png", "/fotosnaps-3.jpeg", "/fotosnaps-4.jpeg",],
+    imageAlt: "Full-Stack Developer Intern at CV Bujangan Wajib Sejahtera",
+  },
+  {
+    id: "exp-3",
+    role: "Independent Writer",
+    company: "Self-Employed",
+    period: "December 2024 — present",
+    description: "Everyday details and abstract ideas often go unnoticed because they are hard to put into words. I turn them into accessible reflective essays in English and Indonesian at Medium @salsabila_, across topics from technology to education and society. My essay The Art of Noticing the Unnoticed reached 2.4K+ views on TikTok @writtenbysal_, strengthening my storytelling, research, and critical thinking.",
+    tags: ["Creative Writing", "Critical Thinking", "Storytelling"],
+    images: ["/writing-1.png", "/writing-4.png", "/writing-5.png"],
+    imageAlt: "Independent Writer",
+  },
+  {
+    id: "exp-4",
+    role: "Member",
+    company: "UNIKOM CodeLabs",
+    period: "February 2024 — January 2025",
+    description: "I joined UNIKOM CodeLabs to turn technical skills into solutions that hold up in competition. I competed in national-level data and technology competitions, built website projects with my team, and contributed Business Model Canvas strategies. I also presented our ideas as a speaker and stayed current through weekly technical discussions, which strengthened my analytics, problem-solving, and public speaking skills.",
+    tags: ["Competition", "Teamwork", "Communication", "Public Speaking", "Data Analytics"],
+    images: ["/codelabs-1.jpeg", "/codelabs-2.jpeg", "/codelabs-3.jpeg", "/codelabs-4.jpeg"],
+    imageAlt: "Member at UNIKOM CodeLabs",
+  },
+];
+
+/* ── Projects (each with 3 preview images that auto-slide) ─────────────── */
+const projects = [
+  {
+    id: "proj-1",
+    title: "Multi-Brand Stock Opname & Warehouse System",
+    description: "Warehouse teams across 3 brands needed one reliable way to manage inventory and sales across 10+ branches. I built a full-stack stock opname and warehouse management system that brings it all into a single platform, with role-based access for 3+ user roles. Stock and sales dashboards with report export now streamline inventory monitoring, and a brand-specific interface with simplified language keeps it easy for non-technical staff.",
+    tags: ["React", "Node.js", "MySQL", "Prisma", "REST API"],
+    status: "Production",
+    images: ["/projek1.png", "/projek2.png", "/projek3.png", "/projek4.png"],
+    demoLink: "https://pos-demo.vercel.app",
+    githubLink: "https://github.com/salsabl22/stokopname",
+  },
+  {
+    id: "proj-2",
+    title: "Pojok Religi | AI Chatbot",
+    description: "Questions about religion, spirituality, and everyday moral life are hard to explore with clear, structured guidance. I built a multi-faith AI assistant with Flask and Groq’s LLaMA 3.3 70B that answers them in organized, thoughtful responses, and reads uploaded PDF, DOCX, JPG, and PNG files through LLaMA 4 Scout vision. Per-user chat history, light and dark themes, and a responsive, mobile-friendly interface make it easy to use on any device.",
+    tags: ["Python", "Flask", "Groq API", "LLaMA 3.3", "JavaScript"],
+    status: "AI Project",
+    images: ["/projek5.png", "/projek6.png"],
+    demoLink: "https://doc-intelligence.streamlit.app",
+    githubLink: "https://github.com/salsabl22/pojok_religi",
+  },
+  {
+    id: "proj-3",
+    title: "Gestura | BISINDO Hand Sign Recognition",
+    description: "Indonesian Sign Language (BISINDO) has few accessible digital tools to bridge communication between deaf and hearing people. I built Gestura, a real-time recognition system that tracks hand landmarks with MediaPipe and OpenCV, then turns gestures into on-screen text and Indonesian speech. It combines rule-based recognition for all 26 alphabet letters, a Random Forest classifier trained on a custom dataset, and custom word gestures, plus a built-in tool for collecting data and training new models.",
+    tags: ["Python", "MediaPipe", "OpenCV", "Scikit-learn", "Random Forest", "Text-to-Speech"],
+    status: "Computer Vision Project",
+    images: ["/projek7.png", "/projek8.png"],
+    demoLink: "https://storefront-demo.vercel.app",
+    githubLink: "https://github.com/salsabl22/gestura",
+  },
+  {
+    id: "proj-4",
+    title: "Pixeltify | Spotify Receipt Generator",
+    description: "Music stats are usually buried in settings or a once-a-year recap. I built Pixeltify, a web app that connects to the Spotify Web API and turns your top tracks into a shareable pixel-art receipt. It wraps API integration and OAuth authentication in a playful, personalized interface, with downloadable results you can post anywhere.",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Spotify Web API", "OAuth"],
+    status: "Web App",
+    images: ["/projek9.jpg", "/projek10.jpg", "/projek11.jpg"],
+    demoLink: "https://storefront-demo.vercel.app",
+    githubLink: "https://github.com/Edwin-Jaya/Pixelated-Receiptify",
+  },
+  {
+    id: "proj-5",
+    title: "Expense Tracker App",
+    description: "Tracking personal income and expenses often means spreadsheets or apps that require an account. I built a lightweight expense tracker in vanilla JavaScript with no frameworks and no backend: it shows a live balance in Rupiah, separates income and expense lists, and supports instant search, in-place editing, and one-click type switching. Everything, including a custom date picker built from scratch, runs in the browser, and data persists through localStorage.",
+    tags: ["JavaScript (ES6+)", "HTML5", "CSS3", "Responsive Design", "localStorage"],
+    status: "Front-End Project",
+    images: ["/projek12.png", "/projek13.png"],
+    demoLink: "https://storefront-demo.vercel.app",
+    githubLink: "https://github.com/salsabl22/expense-tracker-app",
+  },
+  {
+    id: "proj-6",
+    title: "Personal Notes App",
+    description: "Note-taking apps are simple until you need to find, organize, and share what you wrote. I built a single-page notes app with React and React Router that handles the full note lifecycle: create, view, archive, restore, and delete. Search runs through URL query parameters, so a filtered view can be shared as a link, and a rich text editor (bold, italic, underline, lists) goes beyond the basic requirements. Input is validated with PropTypes, and dedicated routes, empty states, and a 404 page keep every path handled.",
+    tags: ["React", "React Router", "Vite", "JavaScript", "PropTypes"],
+    status: "React Project",
+    images: ["/projek14.png", "/projek15.png", "/projek16.png"],
+    demoLink: "https://storefront-demo.vercel.app",
+    githubLink: "https://github.com/salsabl22/expense-tracker-app",
+  },
+];
+
+/* ── Education ─────────────────────────────────────────────────────────── */
+const education = [
+  {
+    degree: "Bachelor of Computer Science, Informatics Engineering",
+    institution: "Universitas Komputer Indonesia",
+    period: "2023 - 2027",
+    description: "Coursework in software engineering, web development, databases, artificial intelligence, and data analytics. I apply it through team-based academic projects, including responsive web apps, AI-integrated systems, and sentiment analysis with machine learning, and through technology competitions that sharpen my analytical and problem-solving skills.",
+    gpa: "3.52 / 4.0",
+  },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content={Astro.generator} />
+
+  <!-- ── Core SEO Meta Tags ──────────────────────────────────────── -->
+  <title>Salsabila | AI Full-Stack Developer & Software Engineer</title>
+  <meta name="title" content="Salsabila | AI Full-Stack Developer & Software Engineer" />
+  <meta name="description" content="Salsabila is an AI Full-Stack Developer specializing in React, Next.js, FastAPI, Node.js, and applied AI systems. View portfolio, real-world multi-branch projects, and case studies." />
+  <meta name="keywords" content="Salsabila, Salsabila developer, AI Full-Stack Developer, Full Stack Developer, Software Engineer Indonesia, React Developer, Next.js, FastAPI, Python, Machine Learning, UNIKOM, Portfolio Salsabila" />
+  <meta name="author" content="Salsabila" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="theme-color" content="#d86c8c" />
+  <link rel="canonical" href={Astro.url.href} />
+
+  <!-- ── Open Graph / Facebook / LinkedIn ────────────────────────── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.url.href} />
+  <meta property="og:title" content="Salsabila | AI Full-Stack Developer & Software Engineer" />
+  <meta property="og:description" content="Portfolio of Salsabila — building scalable full-stack applications and applied AI systems across 3 brands and 20+ branches." />
+  <meta property="og:image" content="/avatar.jpeg" />
+  <meta property="og:image:alt" content="Salsabila - AI Full-Stack Developer" />
+  <meta property="og:site_name" content="Salsabila Portfolio" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- ── Twitter Card ───────────────────────────────────────────── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content={Astro.url.href} />
+  <meta name="twitter:title" content="Salsabila | AI Full-Stack Developer & Software Engineer" />
+  <meta name="twitter:description" content="Portfolio of Salsabila — building scalable full-stack applications and applied AI systems across 3 brands and 20+ branches." />
+  <meta name="twitter:image" content="/avatar.jpeg" />
+
+  <!-- ── JSON-LD Structured Data (Schema.org) for Google Search ──── -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "#person",
+        "name": "Salsabila",
+        "jobTitle": "AI Full-Stack Developer",
+        "description": "Informatics Engineering student and AI Full-Stack Developer building web applications and applied AI systems.",
+        "image": "/avatar.jpeg",
+        "url": Astro.url.href,
+        "sameAs": [
+          "https://github.com/salsabl22",
+          "https://www.linkedin.com/in/salsabilatech/"
+        ],
+        "knowsAbout": [
+          "Full-Stack Development",
+          "Artificial Intelligence",
+          "React",
+          "Next.js",
+          "FastAPI",
+          "Python",
+          "TypeScript",
+          "Machine Learning",
+          "NLP",
+          "Computer Vision"
+        ],
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Universitas Komputer Indonesia"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "#website",
+        "url": Astro.url.href,
+        "name": "Salsabila | Portfolio",
+        "description": "Official portfolio of Salsabila - AI Full-Stack Developer",
+        "publisher": {
+          "@id": "#person"
+        }
+      }
+    ]
+  })} />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <!-- ── Splash Screen / Intro Animation (1.5s Total) ───────── -->
+  <div id="splash-screen" aria-hidden="true">
+    <div class="splash-content">
+      <!-- Flying Paper Plane with Sparkling Star Trail -->
+      <div class="paper-plane-wrapper" id="splash-plane">
+        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 12px var(--accent-2));">
+          <path d="M22 2L11 13"/>
+          <path d="M22 2l-7 20-4-9-9-4 20-7z"/>
+        </svg>
+      </div>
+
+      <!-- Sparkle Trail Container -->
+      <div class="splash-stars-trail" id="splash-trail"></div>
+
+      <!-- Salsabila Brand Reveal -->
+      <div class="splash-title">Salsabila.</div>
+    </div>
+  </div>
+
+  <!-- ── Slower Sparkle Cursor Dot ───────────────────────────── -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+
+  <!-- ── Navigation ────────────────────────────────────────── -->
+  <header class="nav" role="banner">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Back to top">Salsabila.</a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#about"      class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects"   class="nav-link">Projects</a></li>
+          <li><a href="#techstack"  class="nav-link">Tech Stack</a></li>
+          <li><a href="#education"  class="nav-link">Education</a></li>
+          <li><a href="#contact"    class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light mode">
+          <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="hidden" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>
+        </button>
+        <a href="#contact" class="btn btn-primary" style="display:none;" id="hire-btn">Let's Talk</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Hero Section ──────────────────────────────────────── -->
+  <section id="hero" class="section" style="padding-top:7.5rem;padding-bottom:4.5rem;" aria-label="Introduction">
+    <!-- Ambient Glow Backgrounds -->
+    <div aria-hidden="true" class="animate-pulse-slow" style="position:absolute;top:10%;right:10%;width:340px;height:340px;border-radius:50%;background:var(--accent);opacity:0.08;filter:blur(80px);pointer-events:none;"></div>
+    <div aria-hidden="true" class="animate-pulse-slow" style="position:absolute;bottom:15%;left:8%;width:280px;height:280px;border-radius:50%;background:var(--accent-2);opacity:0.1;filter:blur(70px);pointer-events:none;"></div>
+
+    <div class="container">
+      <div class="hero-wrapper">
+
+        <!-- Text Column -->
+        <div class="hero-text-col">
+          <div class="fade-up">
+            <span class="section-label">AI Full-Stack Developer</span>
+          </div>
+
+          <h1 class="fade-up" style="font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:700;color:var(--text);margin-top:0.75rem;margin-bottom:0.75rem;transition-delay:0.08s;line-height:1.15;">
+            Hi, I'm <span style="color:var(--accent);font-style:italic;">Salsabila</span>
+          </h1>
+
+          <!-- Mobile Avatar: Visible ONLY on mobile & tablet, placed right below "Hi, I'm Salsabila" and above the description -->
+          <div class="hero-avatar-mobile fade-up" style="transition-delay:0.12s;">
+            <div class="avatar-wrap">
+              <img
+                src="/avatar.jpeg"
+                alt="Salsabila — Full-Stack Developer & AI Engineer"
+                class="avatar-img"
+                width="200"
+                height="200"
+                loading="eager"
+              />
+            </div>
+          </div>
+
+          <p class="fade-up" style="font-size:1.05rem;color:var(--text-2);max-width:540px;line-height:1.75;margin-bottom:1.75rem;transition-delay:0.14s;">
+            I build <strong style="color:var(--accent);font-weight:600;">AI-powered full-stack systems</strong> that turn manual, multi-branch operations into one scalable platform, shipped across 3 brands and 20+ branches.
+          </p>
+
+          <!-- Stats -->
+          <div class="fade-up card hero-stats" style="transition-delay:0.2s;" aria-label="Key statistics">
+            <div class="hero-stat-item">
+              <div class="stat-num" style="font-family:'Playfair Display',serif;font-weight:700;color:var(--accent);line-height:1;">20+</div>
+              <div class="stat-lbl" style="color:var(--text-3);margin-top:0.25rem;font-weight:500;">Branches Scaled</div>
+            </div>
+            <div class="hero-stat-divider" style="width:1px;background:var(--border);"></div>
+            <div class="hero-stat-item">
+              <div class="stat-num" style="font-family:'Playfair Display',serif;font-weight:700;color:var(--accent);line-height:1;">3</div>
+              <div class="stat-lbl" style="color:var(--text-3);margin-top:0.25rem;font-weight:500;">Brands Digitized</div>
+            </div>
+            <div class="hero-stat-divider" style="width:1px;background:var(--border);"></div>
+            <div class="hero-stat-item">
+              <div class="stat-num" style="font-family:'Playfair Display',serif;font-weight:700;color:var(--accent);line-height:1;">6+</div>
+              <div class="stat-lbl" style="color:var(--text-3);margin-top:0.25rem;font-weight:500;">Projects Shipped</div>
+            </div>
+          </div>
+
+          <div class="fade-up" style="display:flex;flex-wrap:wrap;gap:0.85rem;transition-delay:0.26s;">
+            <a href="#projects" class="btn btn-primary">Explore Projects</a>
+            <a href="#experience" class="btn btn-outline">View Experience</a>
+          </div>
+        </div>
+
+        <!-- Desktop Avatar: Visible ONLY on Laptop & Desktop (placed side-by-side) -->
+        <div class="hero-avatar-col hero-avatar-desktop fade-up" style="transition-delay:0.12s;">
+          <div class="avatar-wrap">
+            <img
+              src="/avatar.jpeg"
+              alt="Salsabila — Full-Stack Developer & AI Engineer"
+              class="avatar-img"
+              width="250"
+              height="250"
+              loading="eager"
+            />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ─────────────────────────────────────────────── -->
+  <section id="about" class="section section-alt" aria-labelledby="about-title">
+    <div class="container">
+      <div style="max-width:860px;margin:0 auto;">
+        <div style="text-align:center;">
+          <span class="section-label fade-up">About Me</span>
+          <h2 id="about-title" class="section-title fade-up" style="transition-delay:0.06s;">Software Built for Real-World Operations</h2>
+          <p class="section-sub fade-up" style="margin-left:auto;margin-right:auto;transition-delay:0.1s;">Full-stack developer with applied AI skills, turning complex workflows into clean, reliable products.</p>
+        </div>
+
+        <div class="card fade-up" style="padding:2rem;margin-bottom:1.75rem;transition-delay:0.14s;">
+          <p style="color:var(--text-2);font-size:0.98rem;line-height:1.8;margin-bottom:1.15rem;">
+            I’m an Informatics Engineering student and a full-stack developer who builds web applications and AI-powered systems. During my internship, I developed a stock opname and warehouse management system that lets admins manage inventory and sales across 20+ branches of 3 brands in a single platform.
+          </p>
+          <p style="color:var(--text-2);font-size:0.98rem;line-height:1.8;">
+            I build full-stack products with React, Next.js, TypeScript, and Tailwind on the front end, and Laravel, Flask, Node.js, and Prisma over MySQL on the back end. Beyond the web layer, I work with applied AI, including NLP with IndoBERT and Scikit-learn, computer vision with OpenCV, and deep learning with TensorFlow. I integrate these models directly into web apps so they solve a real workflow instead of sitting on the side. As a writer in English and Indonesian, I also turn complex problems into clear documentation and ideas teams can act on.
+          </p>
+        </div>
+
+        <!-- 4 Grid Info Cards -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;">
+          <div class="info-card fade-up" style="transition-delay:0.18s;padding:1.15rem;border-radius:16px;">
+            <div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;color:var(--accent);margin-bottom:0.35rem;letter-spacing:0.08em;">Focus</div>
+            <p style="font-weight:600;font-size:0.92rem;color:var(--text);">Full-Stack & Applied AI</p>
+          </div>
+          <div class="info-card fade-up" style="transition-delay:0.22s;padding:1.15rem;border-radius:16px;">
+            <div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;color:var(--accent);margin-bottom:0.35rem;letter-spacing:0.08em;">Current Role</div>
+            <p style="font-weight:600;font-size:0.92rem;color:var(--text);">Full-Stack Developer</p>
+          </div>
+          <div class="info-card fade-up" style="transition-delay:0.26s;padding:1.15rem;border-radius:16px;">
+            <div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;color:var(--accent);margin-bottom:0.35rem;letter-spacing:0.08em;">Location</div>
+            <p style="font-weight:600;font-size:0.92rem;color:var(--text);">Bandung, Indonesia</p>
+          </div>
+          <div class="info-card fade-up" style="transition-delay:0.3s;padding:1.15rem;border-radius:16px;">
+            <div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;color:var(--accent);margin-bottom:0.35rem;letter-spacing:0.08em;">Availability</div>
+            <p style="font-weight:600;font-size:0.92rem;color:var(--text);">Open to Internships & Collaboration</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Experience (Compact Cards with 3 Auto-Sliding Images) ─ -->
+  <section id="experience" class="section" aria-labelledby="exp-title">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="section-label fade-up">Experience</span>
+        <h2 id="exp-title" class="section-title fade-up" style="transition-delay:0.06s;">Career Journey</h2>
+        <p class="section-sub fade-up" style="margin-left:auto;margin-right:auto;transition-delay:0.1s;">From multi-branch warehouse systems and AI projects to national competitions and writing, this is where I turn skills into real work.</p>
+      </div>
+
+      <div class="timeline-list">
+        {experiences.map((exp, idx) => (
+          <article class="card fade-up" style={`overflow:hidden;transition-delay:${idx * 0.1}s;`} aria-label={`${exp.role} at ${exp.company}`}>
+            <div style="display:grid;grid-template-columns:1fr;" class="md:grid-cols-12">
+              
+              <!-- 3-Image Slider Column (Compact Size) -->
+              <div class="md:col-span-5" style="border-bottom:1px solid var(--border);" class="md:border-b-0 md:border-r">
+                <div class="card-slider" id={`slider-${exp.id}`} style="height:100%;min-height:190px;max-height:220px;">
+                  <!-- Slider Navigation Buttons -->
+                  <button class="card-slider-btn card-slider-btn-prev" data-target={`slider-${exp.id}`} data-action="prev" aria-label="Previous image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                  </button>
+                  <button class="card-slider-btn card-slider-btn-next" data-target={`slider-${exp.id}`} data-action="next" aria-label="Next image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+
+                  <!-- Slider Track with 3 Images -->
+                  <div class="card-slider-track" style="height:100%;">
+                    {exp.images.map((imgSrc, imgI) => (
+                      <img
+                        src={imgSrc}
+                        alt={`${exp.role} preview ${imgI + 1}`}
+                        style="height:100%;min-height:190px;max-height:220px;"
+                        loading="lazy"
+                      />
+                    ))}
+                  </div>
+
+                  <!-- Slider Dots Indicator -->
+                  <div class="card-slider-dots">
+                    {exp.images.map((_, dotI) => (
+                      <button class={`card-slider-dot ${dotI === 0 ? 'active' : ''}`} data-index={dotI} aria-label={`View image ${dotI + 1}`}></button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content Column (Clean & Compact Spacing) -->
+              <div class="md:col-span-7" style="padding:1.35rem 1.65rem;display:flex;flex-direction:column;justify-content:center;">
+                <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:0.5rem;margin-bottom:0.5rem;">
+                  <div>
+                    <h3 style="font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:0.15rem;">{exp.role}</h3>
+                    <p style="font-size:0.84rem;font-weight:600;color:var(--accent);">{exp.company}</p>
+                  </div>
+                  <span style="font-size:0.72rem;font-weight:600;padding:0.22rem 0.75rem;border-radius:9999px;background:var(--accent-bg-2);color:var(--accent);border:1px solid var(--border-2);white-space:nowrap;">{exp.period}</span>
+                </div>
+                <p style="color:var(--text-2);font-size:0.88rem;line-height:1.6;margin-bottom:0.85rem;">{exp.description}</p>
+                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+                  {exp.tags.map(tag => <span class="tag">{tag}</span>)}
+                </div>
+              </div>
+
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Projects (Compact Grid with 3 Auto-Sliding Images) ───── -->
+  <section id="projects" class="section section-alt" aria-labelledby="proj-title">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="section-label fade-up">Projects</span>
+        <h2 id="proj-title" class="section-title fade-up" style="transition-delay:0.06s;">Featured Work</h2>
+        <p class="section-sub fade-up" style="margin-left:auto;margin-right:auto;transition-delay:0.1s;">Full-stack and AI projects built to solve real problems, from business operations to everyday tools.</p>
+      </div>
+
+      <div class="projects-grid">
+        {projects.map((proj, idx) => (
+          <article class="card fade-up" style={`overflow:hidden;display:flex;flex-direction:column;transition-delay:${idx * 0.1}s;`} aria-label={proj.title}>
+            
+            <!-- 3-Image Slider Header -->
+            <div class="card-slider" id={`slider-${proj.id}`} style="height:200px;border-bottom:1px solid var(--border);">
+              <!-- Slider Navigation Buttons -->
+              <button class="card-slider-btn card-slider-btn-prev" data-target={`slider-${proj.id}`} data-action="prev" aria-label="Previous preview">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button class="card-slider-btn card-slider-btn-next" data-target={`slider-${proj.id}`} data-action="next" aria-label="Next preview">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+
+              <!-- Slider Track with 3 Images -->
+              <div class="card-slider-track" style="height:100%;">
+                {proj.images.map((imgSrc, imgI) => (
+                  <img
+                    src={imgSrc}
+                    alt={`${proj.title} preview screenshot ${imgI + 1}`}
+                    style="height:100%;object-fit:cover;"
+                    loading="lazy"
+                  />
+                ))}
+              </div>
+
+              <!-- Slider Dots Indicator -->
+              <div class="card-slider-dots">
+                {proj.images.map((_, dotI) => (
+                  <button class={`card-slider-dot ${dotI === 0 ? 'active' : ''}`} data-index={dotI} aria-label={`View screenshot ${dotI + 1}`}></button>
+                ))}
+              </div>
+            </div>
+
+            <!-- Project Card Content -->
+            <div style="padding:1.35rem;display:flex;flex-direction:column;flex:1;justify-content:space-between;">
+              <div>
+                <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:0.75rem;margin-bottom:0.65rem;">
+                  <h3 style="font-size:1.1rem;font-weight:700;color:var(--text);">{proj.title}</h3>
+                  <span style="font-size:0.7rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:9999px;background:var(--accent-bg-2);color:var(--accent);border:1px solid var(--border-2);white-space:nowrap;">{proj.status}</span>
+                </div>
+                <p style="color:var(--text-2);font-size:0.86rem;line-height:1.6;margin-bottom:1.1rem;">{proj.description}</p>
+                <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:1.25rem;">
+                  {proj.tags.map(tag => <span class="tag">{tag}</span>)}
+                </div>
+              </div>
+
+              <!-- Direct Buttons: Live Demo & GitHub -->
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.65rem;">
+                <a
+                  href={proj.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary"
+                  style="padding:0.5rem 0.8rem;font-size:0.8rem;"
+                  aria-label={`View live demo of ${proj.title}`}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                  </svg>
+                  Live Demo
+                </a>
+                <a
+                  href={proj.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-outline"
+                  style="padding:0.5rem 0.8rem;font-size:0.8rem;"
+                  aria-label={`View source code of ${proj.title} on GitHub`}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                  </svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Tech Stack (Auto-Moving 2 Rows Left & Right) ───────────── -->
+  <section id="techstack" class="section" aria-labelledby="tech-title">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="section-label fade-up">Tech Stack</span>
+        <h2 id="tech-title" class="section-title fade-up" style="transition-delay:0.06s;">Tools I Build With</h2>
+        <p class="section-sub fade-up" style="margin-left:auto;margin-right:auto;transition-delay:0.1s;">The technologies I use to ship full-stack products and bring applied AI into real workflows. Drag or swipe to explore.</p>
+      </div>
+
+      <!-- Row 1: Web & Fullstack (Moving Right) -->
+      <div class="fade-up" style="margin-bottom:2.25rem;transition-delay:0.14s;">
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem;padding-left:0.5rem;">
+          <div style="width:8px;height:8px;border-radius:50%;background:var(--accent);"></div>
+          <h3 style="font-family:'DM Sans',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);">Web & Full-Stack Development</h3>
+        </div>
+        <div class="marquee-wrapper" data-marquee="row1">
+          <div class="marquee-track marquee-right">
+            {webStack.concat(webStack).map(item => (
+              <div class="tech-item" role="listitem">
+                {item.icon ? (
+                  <>
+                    <img
+                      src={item.icon}
+                      alt={item.label}
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                      onerror="this.style.display='none'; this.nextElementSibling.classList.add('tech-text-centered');"
+                    />
+                    <span>{item.label}</span>
+                  </>
+                ) : (
+                  <span class="tech-text-centered">{item.label}</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Data & AI (Moving Left) -->
+      <div class="fade-up" style="transition-delay:0.2s;">
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem;padding-left:0.5rem;">
+          <div style="width:8px;height:8px;border-radius:50%;background:var(--accent-2);"></div>
+          <h3 style="font-family:'DM Sans',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);">Applied AI & Data Science</h3>
+        </div>
+        <div class="marquee-wrapper" data-marquee="row2">
+          <div class="marquee-track marquee-left">
+            {aiStack.concat(aiStack).map(item => (
+              <div class="tech-item" role="listitem">
+                {item.icon ? (
+                  <>
+                    <img
+                      src={item.icon}
+                      alt={item.label}
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                      onerror="this.style.display='none'; this.nextElementSibling.classList.add('tech-text-centered');"
+                    />
+                    <span>{item.label}</span>
+                  </>
+                ) : (
+                  <span class="tech-text-centered">{item.label}</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Education ──────────────────────────────────────────── -->
+  <section id="education" class="section section-alt" aria-labelledby="edu-title">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="section-label fade-up">Education</span>
+        <h2 id="edu-title" class="section-title fade-up" style="transition-delay:0.06s;">Academic Foundation</h2>
+        <p class="section-sub fade-up" style="margin-left:auto;margin-right:auto;transition-delay:0.1s;">Formal training in software engineering, AI, and data, applied through real projects.</p>
+      </div>
+
+      <div style="max-width:760px;margin:0 auto;">
+        {education.map((edu, i) => (
+          <div class="card fade-up" style={`padding:1.75rem 2rem;transition-delay:${i * 0.1}s;`}>
+            <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:0.75rem;">
+              <div>
+                <h3 style="font-size:1.25rem;font-weight:700;color:var(--text);margin-bottom:0.25rem;">{edu.degree}</h3>
+                <p style="font-size:0.92rem;font-weight:600;color:var(--accent);">{edu.institution}</p>
+              </div>
+              <div style="display:flex;align-items:center;gap:0.75rem;">
+                <span style="font-size:0.75rem;font-weight:600;padding:0.22rem 0.75rem;border-radius:9999px;background:var(--accent-bg-2);color:var(--accent);border:1px solid var(--border-2);">{edu.period}</span>
+                <span style="font-size:0.75rem;font-weight:700;padding:0.22rem 0.75rem;border-radius:9999px;background:var(--accent);color:#fff;">Current GPA {edu.gpa}</span>
+              </div>
+            </div>
+            <p style="color:var(--text-2);font-size:0.92rem;line-height:1.7;">{edu.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact / Footer ────────────────────────────────────── -->
+  <footer id="contact" class="section" style="padding-bottom:3rem;" aria-labelledby="contact-title">
+    <div class="container">
+      <div style="text-align:center;">
+        <span class="section-label fade-up">Contact</span>
+        <h2 id="contact-title" class="section-title fade-up" style="transition-delay:0.06s;">Let’s Build Something Together</h2>
+        <p class="section-sub fade-up" style="margin-left:auto;margin-right:auto;transition-delay:0.1s;">I’m open to internships and collaborations in full-stack development and applied AI. Send me a message and I’ll get back to you soon.</p>
+      </div>
+
+      <div class="contact-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;max-width:960px;margin:0 auto 3.5rem;">
+        <a href="mailto:salsabila.codes@gmail.com" class="contact-link fade-up" style="transition-delay:0.14s;" id="contact-email">
+          <div style="width:44px;height:44px;border-radius:14px;background:var(--accent-bg-2);color:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div class="contact-info">
+            <div style="font-size:0.75rem;color:var(--text-3);font-weight:600;text-transform:uppercase;">Email</div>
+            <div class="contact-text" style="font-size:0.92rem;font-weight:600;color:var(--text);">salsabila.codes@gmail.com</div>
+          </div>
+        </a>
+
+        <a href="https://github.com/salsabl22" target="_blank" rel="noopener noreferrer" class="contact-link fade-up" style="transition-delay:0.18s;" id="contact-github">
+          <div style="width:44px;height:44px;border-radius:14px;background:var(--accent-bg-2);color:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+          </div>
+          <div class="contact-info">
+            <div style="font-size:0.75rem;color:var(--text-3);font-weight:600;text-transform:uppercase;">GitHub</div>
+            <div class="contact-text" style="font-size:0.92rem;font-weight:600;color:var(--text);">github.com/salsabl22</div>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/salsabilatech/" target="_blank" rel="noopener noreferrer" class="contact-link fade-up" style="transition-delay:0.22s;" id="contact-linkedin">
+          <div style="width:44px;height:44px;border-radius:14px;background:var(--accent-bg-2);color:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </div>
+          <div class="contact-info">
+            <div style="font-size:0.75rem;color:var(--text-3);font-weight:600;text-transform:uppercase;">LinkedIn</div>
+            <div class="contact-text" style="font-size:0.92rem;font-weight:600;color:var(--text);">linkedin.com/in/salsabilatech/</div>
+          </div>
+        </a>
+      </div>
+
+      <div style="height:1px;background:var(--border);margin-bottom:2rem;"></div>
+
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-3);font-size:0.86rem;">
+        <span style="font-weight:700;color:var(--accent);font-family:'Playfair Display',serif;font-style:italic;">Salsabila.</span>
+        <span>© 2026 Salsabila. Built with Astro and Tailwind CSS.</span>
+        <div style="display:flex;gap:1.5rem;">
+          <a href="#hero" class="nav-link" style="font-size:0.84rem;">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Interactive Scripts ────────────────────────────────── -->
+  <script>
+    /* ── Splash Screen Logic (Exact 1.5s Total Timeline) ───── */
+    const splash = document.getElementById('splash-screen');
+    const splashTrail = document.getElementById('splash-trail');
+    const SPARKLE_CHARS = ['✦', '✧', '⋆', '·'];
+
+    if (splash && splashTrail) {
+      // Spawn pink sparkle trail following the paper plane
+      let trailCount = 0;
+      const trailInterval = setInterval(() => {
+        if (trailCount > 10) {
+          clearInterval(trailInterval);
+          return;
+        }
+        trailCount++;
+        const s = document.createElement('span');
+        s.className = 'trail-sparkle';
+        s.textContent = SPARKLE_CHARS[Math.floor(Math.random() * SPARKLE_CHARS.length)];
+        // Trail coordinates calculated along the flight arc
+        const progress = trailCount / 10;
+        const xOffset = -120 + progress * 240 + (Math.random() * 20 - 10);
+        const yOffset = 40 - Math.sin(progress * Math.PI) * 70 + (Math.random() * 20 - 10);
+        s.style.left = `calc(50% + ${xOffset}px)`;
+        s.style.top = `calc(50% + ${yOffset}px)`;
+        s.style.fontSize = `${Math.floor(Math.random() * 8 + 12)}px`;
+        splashTrail.appendChild(s);
+        setTimeout(() => s.remove(), 800);
+      }, 90);
+
+      // 1.0s: Outro starts, 1.5s: fully removed
+      setTimeout(() => {
+        splash.classList.add('splash-exit');
+        setTimeout(() => {
+          splash.remove();
+        }, 500);
+      }, 1000);
+    }
+
+    /* ── Slower, Calmer Sparkle Cursor ─────────────────────── */
+    const dot = document.getElementById('cursor-dot');
+    let lastSparkleTime = 0;
+
+    window.addEventListener('mousemove', (e) => {
+      const { clientX: x, clientY: y } = e;
+      if (dot) {
+        dot.style.left = `${x}px`;
+        dot.style.top = `${y}px`;
+      }
+
+      const now = Date.now();
+      if (now - lastSparkleTime > 130) {
+        lastSparkleTime = now;
+        const s = document.createElement('span');
+        s.className = 'sparkle-particle';
+        s.textContent = SPARKLE_CHARS[Math.floor(Math.random() * SPARKLE_CHARS.length)];
+        s.style.left = `${x}px`;
+        s.style.top = `${y}px`;
+        s.style.fontSize = `${Math.floor(Math.random() * 8 + 11)}px`;
+        document.body.appendChild(s);
+        s.addEventListener('animationend', () => s.remove(), { once: true });
+      }
+    });
+
+    /* ── Theme Toggle ──────────────────────────────────────── */
+    const html = document.documentElement;
+    const themeBtn = document.getElementById('theme-toggle');
+    const sunIcon = document.getElementById('icon-sun');
+    const moonIcon = document.getElementById('icon-moon');
+    const hireBtn = document.getElementById('hire-btn');
+
+    function applyTheme(dark: boolean) {
+      html.classList.toggle('dark', dark);
+      sunIcon?.classList.toggle('hidden', !dark);
+      moonIcon?.classList.toggle('hidden', dark);
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    applyTheme(savedTheme !== 'light');
+
+    themeBtn?.addEventListener('click', () => {
+      const dark = !html.classList.contains('dark');
+      applyTheme(dark);
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    });
+
+    if (window.innerWidth >= 640 && hireBtn) {
+      hireBtn.style.display = 'inline-flex';
+    }
+
+    /* ── Per-Card 3-Image Slider with Auto-Play & Buttons ───── */
+    function initCardSliders() {
+      const sliders = document.querySelectorAll('.card-slider');
+
+      sliders.forEach((slider, sliderIdx) => {
+        const track = slider.querySelector('.card-slider-track') as HTMLElement;
+        const dots = slider.querySelectorAll('.card-slider-dot');
+        const prevBtn = slider.querySelector('.card-slider-btn-prev');
+        const nextBtn = slider.querySelector('.card-slider-btn-next');
+        if (!track) return;
+
+        const totalImages = track.children.length;
+        let currentIdx = 0;
+        let autoPlayTimer: number;
+
+        function setSlide(i: number) {
+          currentIdx = (i + totalImages) % totalImages;
+          track.style.transform = `translateX(-${currentIdx * 100}%)`;
+          dots.forEach((dot, dotIndex) => {
+            dot.classList.toggle('active', dotIndex === currentIdx);
+          });
+        }
+
+        function nextSlide() {
+          setSlide(currentIdx + 1);
+        }
+
+        function prevSlide() {
+          setSlide(currentIdx - 1);
+        }
+
+        function startTimer() {
+          clearInterval(autoPlayTimer);
+          const interval = 4200 + (sliderIdx % 3) * 600;
+          autoPlayTimer = window.setInterval(nextSlide, interval);
+        }
+
+        nextBtn?.addEventListener('click', (e) => {
+          e.stopPropagation();
+          nextSlide();
+          startTimer();
+        });
+
+        prevBtn?.addEventListener('click', (e) => {
+          e.stopPropagation();
+          prevSlide();
+          startTimer();
+        });
+
+        dots.forEach((dot, dIdx) => {
+          dot.addEventListener('click', (e) => {
+            e.stopPropagation();
+            setSlide(dIdx);
+            startTimer();
+          });
+        });
+
+        slider.addEventListener('mouseenter', () => clearInterval(autoPlayTimer));
+        slider.addEventListener('mouseleave', () => startTimer());
+
+        startTimer();
+      });
+    }
+
+    initCardSliders();
+
+    /* ── Draggable Tech Stack Marquee (Left & Right Drag) ──── */
+    function initDraggableMarquees() {
+      const wrappers = document.querySelectorAll('.marquee-wrapper');
+      wrappers.forEach(wrapper => {
+        const track = wrapper.querySelector('.marquee-track') as HTMLElement;
+        if (!track) return;
+
+        let isDown = false;
+        let startX = 0;
+        let startTransformX = 0;
+
+        function getCurrentTranslateX() {
+          const style = window.getComputedStyle(track);
+          const matrix = new WebKitCSSMatrix(style.transform);
+          return matrix.m41;
+        }
+
+        wrapper.addEventListener('mousedown', (e: MouseEvent) => {
+          isDown = true;
+          wrapper.classList.add('is-dragging');
+          track.classList.add('is-dragging');
+          const currentX = getCurrentTranslateX();
+          track.style.animationPlayState = 'paused';
+          track.style.transform = `translateX(${currentX}px)`;
+          startX = e.pageX;
+          startTransformX = currentX;
+        });
+
+        window.addEventListener('mouseup', () => {
+          if (!isDown) return;
+          isDown = false;
+          wrapper.classList.remove('is-dragging');
+          track.classList.remove('is-dragging');
+          // Resume animation smoothly or maintain transform
+          track.style.animationPlayState = '';
+        });
+
+        window.addEventListener('mousemove', (e: MouseEvent) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const walk = (e.pageX - startX) * 1.4;
+          const newX = startTransformX + walk;
+          track.style.transform = `translateX(${newX}px)`;
+        });
+
+        // Touch support for mobile/tablets
+        let touchStartX = 0;
+        let touchStartTransformX = 0;
+        let isTouching = false;
+
+        wrapper.addEventListener('touchstart', (e: TouchEvent) => {
+          isTouching = true;
+          const currentX = getCurrentTranslateX();
+          track.style.animationPlayState = 'paused';
+          track.style.transform = `translateX(${currentX}px)`;
+          touchStartX = e.touches[0].pageX;
+          touchStartTransformX = currentX;
+        }, { passive: true });
+
+        window.addEventListener('touchend', () => {
+          if (!isTouching) return;
+          isTouching = false;
+          track.style.animationPlayState = '';
+        });
+
+        window.addEventListener('touchmove', (e: TouchEvent) => {
+          if (!isTouching) return;
+          const walk = (e.touches[0].pageX - touchStartX) * 1.4;
+          const newX = touchStartTransformX + walk;
+          track.style.transform = `translateX(${newX}px)`;
+        }, { passive: true });
+      });
+    }
+
+    initDraggableMarquees();
+
+    /* ── Scroll Fade-up Observer ───────────────────────────── */
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+    fadeEls.forEach(el => io.observe(el));
+  </script>
+
+</body>
 </html>
