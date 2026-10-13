@@ -47,8 +47,8 @@ I build full-stack products and integrate applied AI directly into web apps. Thi
 ### Installation
 
 ```bash
-git clone https://github.com/salsabl22/portfolio.git
-cd portfolio
+git clone https://github.com/salsabl22/my-portfolio.git
+cd my-portfolio
 npm install
 ```
 
